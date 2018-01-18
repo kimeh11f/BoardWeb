@@ -1,6 +1,19 @@
 package polymorphism;
 
+import org.springframework.stereotype.Component;
+
+
 public class SamsungTV implements TV {
+	public void setSpeaker(Speaker speaker) {
+		System.out.println("===> setSpeaker 호출");
+		this.speaker = speaker;
+	}
+
+	public void setPrice(int price) {
+		System.out.println("===> setPrice 호출");
+		this.price = price;
+	}
+
 	private Speaker speaker;
 	private int price;
 	
@@ -17,6 +30,8 @@ public class SamsungTV implements TV {
 		this.speaker = speaker;
 		this.price = price;
 	}
+	
+	
 	
 	public void powerOn() {
 		System.out.println("Samsung TV --- 전원을 켠다.");
