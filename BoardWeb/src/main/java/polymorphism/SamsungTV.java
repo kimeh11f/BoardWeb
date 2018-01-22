@@ -1,9 +1,16 @@
 package polymorphism;
 
+import javax.annotation.Resource;
+
 import org.springframework.stereotype.Component;
 
 
 public class SamsungTV implements TV {
+	
+	@Resource(name = "sony")
+	private Speaker speaker;
+	private int price;
+	
 	public void setSpeaker(Speaker speaker) {
 		System.out.println("===> setSpeaker 호출");
 		this.speaker = speaker;
@@ -13,9 +20,6 @@ public class SamsungTV implements TV {
 		System.out.println("===> setPrice 호출");
 		this.price = price;
 	}
-
-	private Speaker speaker;
-	private int price;
 	
 	public SamsungTV() {
 		System.out.println("===> SamsungTV(1) 객체 생성됨");
