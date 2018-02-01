@@ -8,7 +8,7 @@ public class AroundAdvice {
 		String method = pjp.getSignature().getName();
 		StopWatch stopWatch = new StopWatch();
 		stopWatch.start();
-		
+		System.out.println(method + "() 메소드 수행");
 		Object obj = pjp.proceed();
 		System.out.println(method + "() 메소드 수행에 걸린 시간 : "
 				+ stopWatch.getTotalTimeMillis() + "(ms)초");

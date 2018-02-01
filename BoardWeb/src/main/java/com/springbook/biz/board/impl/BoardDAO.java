@@ -13,7 +13,7 @@ import com.springbook.biz.board.BoardVO;
 import com.springbook.biz.common.JDBCUtil;
 
 @Repository("boardDAO")
-public class BoardDAO implements BoardService {
+public class BoardDAO  {
 	private Connection conn = null;
 	private PreparedStatement stmt = null;
 	private ResultSet rs = null;
@@ -24,7 +24,7 @@ public class BoardDAO implements BoardService {
 	private final String BOARD_GET 	  = "select * from board where seq=?";
 	private final String BOARD_LIST   = "select * from board order by seq desc";
 	
-	@Override
+	
 	public void insertBoard(BoardVO vo) {
 		System.out.println("===> JDBC 로 InsertBoard() 기능 처리");
 		try {
@@ -41,7 +41,7 @@ public class BoardDAO implements BoardService {
 		}
 	}
 	
-	@Override
+
 	public void updateBoard(BoardVO vo) {
 		System.out.println("===> JDBC로 updateBoard() 기능 처리");
 		try {
@@ -58,7 +58,7 @@ public class BoardDAO implements BoardService {
 		}
 	}
 	
-	@Override
+
 	public void deleteBoard(BoardVO vo) {
 		System.out.println("===> JDBC로 deleteBoard() 기능 처리");
 		try {
@@ -73,7 +73,7 @@ public class BoardDAO implements BoardService {
 		}
 	}
 	
-	@Override
+
 	public BoardVO getBoard(BoardVO vo) {
 		System.out.println("===> JDBC로  getBoard() 기능 처리");
 		BoardVO board = null;
@@ -101,7 +101,7 @@ public class BoardDAO implements BoardService {
 		return board;
 	}
 	
-	@Override
+
 	public List<BoardVO> getBoardList(BoardVO vo){
 		System.out.println("===> JDBC로  getBoardList() 기능 처리");
 		List<BoardVO> boardList = new ArrayList<BoardVO>();
