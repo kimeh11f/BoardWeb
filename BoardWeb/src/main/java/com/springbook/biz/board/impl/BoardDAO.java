@@ -12,7 +12,7 @@ import com.springbook.biz.board.BoardService;
 import com.springbook.biz.board.BoardVO;
 import com.springbook.biz.common.JDBCUtil;
 
-@Repository("boardDAO")
+//@Repository("boardDAO")
 public class BoardDAO  {
 	private Connection conn = null;
 	private PreparedStatement stmt = null;
