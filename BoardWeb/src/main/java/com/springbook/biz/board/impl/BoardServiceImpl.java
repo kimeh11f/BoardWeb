@@ -23,7 +23,6 @@ public class BoardServiceImpl implements BoardService{
 		}*/
 		
 		boardDAO.insertBoard(vo);
-		
 	}
 
 	@Override
