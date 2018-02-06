@@ -15,7 +15,7 @@ import com.springbook.biz.board.BoardService;
 import com.springbook.biz.board.BoardVO;
 import com.springbook.biz.common.JDBCUtil;
 
-//@Repository
+@Repository
 public class BoardDAO  {
 	private Connection conn = null;
 	private PreparedStatement stmt = null;
@@ -81,7 +81,7 @@ public class BoardDAO  {
 		BoardVO board = null;
 		try {
 			conn = JDBCUtil.getConnection();
-			stmt = conn.prepareStatement(BOARD_DELETE);
+			stmt = conn.prepareStatement(BOARD_GET);
 			stmt.setInt(1, vo.getSeq());
 			rs = stmt.executeQuery();
 			

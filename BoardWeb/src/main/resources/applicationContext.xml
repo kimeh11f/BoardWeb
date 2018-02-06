@@ -63,9 +63,9 @@
 	</bean>
 	
 	<bean id="around" class="com.springbook.biz.common.AroundAdvice">
-	</bean>
+	</bean> -->
 	
-	<aop:config>
+<!-- 	<aop:config>
 		<aop:pointcut id="allPointcut"
 			expression="execution(* com.springbook.biz..*Impl.*(..))"/>
 		<aop:pointcut id="getPointcut" 
