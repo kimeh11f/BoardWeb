@@ -27,13 +27,20 @@ public class DispatcherServlet extends HttpServlet {
 		viewResolver = new ViewResolver();
 		viewResolver.setPrefix("./");
 		viewResolver.setSuffix(".jsp");
+	} 
+
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+	{
+		System.out.println("service 메소드에서 doGet, doPost 분기");
+		super.service(request, response);
 	}
-	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("doGet");
 		process(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("doPost");
 		request.setCharacterEncoding("EUC-KR");
 		process(request, response);
 	}
